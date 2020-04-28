@@ -7,18 +7,13 @@
             <h1><a href = "/">Blog Hello Collective</a></h1>
         </div>
 
-        <div>
-            <p>publicado: 27. abril. 2020, 17:31</p>
-            <h2><a href = "">Meu primeiro post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare...</p>
-        </div>
+        {% for post in posts %}
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h2><a href="">{{ post.title }}</a></h2>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
 
-        <div>
-            <p>publicado: 27. abril. 2020, 17:31</p>
-            <h2><a href = "">Meu segundo post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare...</p>
-        </div>
-        <!-- <p>Hi there!</p>
-        <p>It works!</p> -->
     </body>
 </html>
